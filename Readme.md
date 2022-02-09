@@ -3,20 +3,22 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T496531)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# ASP.NET - Handle the client-side FocusedCellChanging event to prevent an edit action for ASPxGridView cells
+
+This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to prevent users from editing corresponding grid cells in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode).
+
+## Files to look at:
 
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-<!-- default file list end -->
-# ASPxGridView - Batch Edit - Cancel editor/row editing in the client FocusedCellChanging event
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t496531/)**
-<!-- run online end -->
 
 
-Starting from version 17.1 we have introduced a new client-side <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebScriptsASPxClientGridView_FocusedCellChangingtopic">FocusedCellChanging</a> event. This event allows you to skip focusing and editing a cell. <br>This example demonstrates different ways to skip or prevent editing certain cells.<br>The main idea is to get the currently focused cell using the <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebScriptsASPxClientGridViewFocusedCellChangingEventArgs_cellInfotopic">ASPxClientGridViewFocusedCellChangingEventArgs.cellInfo</a> property and decide whether it is required to skip focusing or not:<br>
+## Implementation Details
 
+On the client side, the [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event contains clicked cell data of the [`ASPxClientGridViewCellInfo`](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewCellInfo) class. To get this data, the code below uses the event handler argument's [`cellInfo`](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewFocusedCellChangingEventArgs.cellInfo) property.
+
+Depending on the obtained data, the handler determines whether a user can focus and then edit the clicked cell. For this purpose, the code specifies the handler argument's [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property. When the [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property is **true**, the grid cancels the focus action for the corresponding cell.
 
 ```js
 function onFocusedCellChanging(s, e) {
@@ -31,9 +33,4 @@ function onFocusedCellChanging(s, e) {
 }
 ```
 
-
-<p><strong>Note</strong>: the FocusedCellChanging event can't prevent editor focusing if the <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebASPxGridView_SettingsEditingtopic">ASPxGridView.SettingsEditing</a> -> <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebASPxGridViewEditingSettings_BatchEditSettingstopic">BatchEditSettings</a> -> <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebGridViewBatchEditSettings_EditModetopic">EditMode</a> property is set to Row.</p>
-
-<br/>
-
-
+Note that this technique does not work if you set the [`EditMode`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus any cell in the row switched to edit mode (except for cells of columns with the enabled [`ReadOnly`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property).
