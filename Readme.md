@@ -22,7 +22,7 @@ This example handles the client-side [`FocusedCellChanging`](https://docs.devexp
 
 On the client side, the [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event contains clicked cell data of the [`ASPxClientGridViewCellInfo`](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewCellInfo) class. To get this data, the code below uses the event handler argument's [`cellInfo`](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewFocusedCellChangingEventArgs.cellInfo) property.
 
-Depending on the obtained data, the handler determines whether a user can focus and then edit the clicked cell. For this purpose, the code specifies the handler argument's [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property. When the [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property is **true**, the grid cancels the focus action for the clicked cell.
+Depending on the obtained data, the handler code determines whether a user can focus and then edit the clicked cell. For this purpose, the code specifies the handler argument's [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property. When the [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property is **true**, the grid cancels the focus action for the clicked cell.
 
 ```js
 function onFocusedCellChanging(s, e) {
