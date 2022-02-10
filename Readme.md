@@ -12,7 +12,7 @@ This example handles the client-side [`FocusedCellChanging`](https://docs.devexp
 **[[Run Online]](https://codecentral.devexpress.com/t496531/)**
 <!-- run online end -->
 
-## Files to look at
+## Files to Look At
 
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
