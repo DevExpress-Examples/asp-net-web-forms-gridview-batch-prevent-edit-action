@@ -8,6 +8,10 @@
 
 This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to prevent users from editing corresponding grid cells in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode).
 
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t496531/)**
+<!-- run online end -->
+
 ## Files to look at:
 
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
