@@ -22,7 +22,6 @@ This example handles the client-side [`FocusedCellChanging`](https://docs.devexp
 
 The following client-side [`FocusedCellChanging`] event handler uses the [`e.Cancel`] property to cancel the focus action (and subsequent edit operations) for cells in specific columns and rows. The code uses the [`e.cellInfo`] event property to get information on the clicked cell's column and row.
 
-Depending on the obtained data, the handler code determines whether a user can focus and then edit the clicked cell. For this purpose, the code specifies the handler argument's [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property. When the [`cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property is **true**, the grid cancels the focus action for the clicked cell.
 
 ```js
 function onFocusedCellChanging(s, e) {
