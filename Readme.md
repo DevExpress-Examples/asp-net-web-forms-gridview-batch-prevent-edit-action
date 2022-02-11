@@ -36,4 +36,4 @@ function onFocusedCellChanging(s, e) {
 }
 ```
 
-Note that this technique does not work if you set the [`EditMode`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus and then edit any cell in the row switched to edit mode (except for cells of columns with the enabled [`ReadOnly`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property).
+This technique is not applicable if you set the [`EditMode`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus and edit any cell in the row switched to edit mode except for cells in read-only columns (the [`GridViewDataColumn.ReadOnly`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property).
