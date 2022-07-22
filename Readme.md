@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # ASPxGridView - Batch Edit - Cancel editor/row editing in the client FocusedCellChanging event
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t496531/)**
+**[[Run Online]](https://codecentral.devexpress.com/134059439/)**
 <!-- run online end -->
 
 
