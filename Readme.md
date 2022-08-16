@@ -6,7 +6,8 @@
 
 <!-- default badges end -->
 
-# Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in the batch edit mode
+# Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in batch edit mode
+
 
 <!-- run online -->
 
@@ -14,7 +15,8 @@
 
 <!-- run online end -->
 
-This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in the [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
+This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
+
 
 > **Limitation:** This technique is not applicable if you set the [`EditMode`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus and edit any cell in a row switched to edit mode except for cells that belong to read-only columns (the column's [`GridViewDataColumn.ReadOnly`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property is set to `true`).
 
