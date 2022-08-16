@@ -6,7 +6,7 @@
 
 <!-- default badges end -->
 
-# Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client
+# Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in the batch edit mode
 
 <!-- run online -->
 
