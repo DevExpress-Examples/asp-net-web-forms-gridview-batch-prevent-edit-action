@@ -10,14 +10,14 @@
 **[[Run Online]](https://codecentral.devexpress.com/134059439/)**
 <!-- run online end -->
 
-This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
+This example handles the client-side [FocusedCellChanging](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
 
 
-> **Limitation:** This technique is not applicable if you set the [`EditMode`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus and edit any cell in a row switched to edit mode except for cells that belong to read-only columns (the column's [`GridViewDataColumn.ReadOnly`](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property is set to `true`).
+> **Limitation:** This technique is not applicable if you set the [EditMode](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewBatchEditSettings.EditMode) property to **Row**. A user can focus and edit any cell in a row switched to edit mode except for cells that belong to read-only columns (the column's [GridViewDataColumn.ReadOnly](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.ReadOnly) property is set to `true`).
 
 ## Implementation Details
 
-The following client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event handler sets the [`e.Cancel`](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property to `true` to cancel the focus action and subsequent edit operations for cells in specific columns and rows. The code uses the [`e.cellInfo`](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewFocusedCellChangingEventArgs.cellInfo) event property to get information about the clicked cell.
+The following client-side [FocusedCellChanging](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event handler sets the [e.Cancel](https://docs.devexpress.com/AspNet/js-ASPxClientCancelEventArgs.cancel) property to `true` to cancel the focus action and subsequent edit operations for cells in specific columns and rows. The code uses the [e.cellInfo](https://docs.devexpress.com/AspNet/js-ASPxClientGridViewFocusedCellChangingEventArgs.cellInfo) event property to get information about the clicked cell.
 
 ```js
 function onFocusedCellChanging(s, e) {
