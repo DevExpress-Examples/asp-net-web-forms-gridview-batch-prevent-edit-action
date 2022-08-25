@@ -1,18 +1,11 @@
 <!-- default badges list -->
-
 ![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/134059439/21.2.4%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T496531)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-
 <!-- default badges end -->
-
 # Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in batch edit mode
-
-
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/134059439/)**
-**[[Run Online]](https://codecentral.devexpress.com/134059439/)**
-
 <!-- run online end -->
 
 This example handles the client-side [`FocusedCellChanging`](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
