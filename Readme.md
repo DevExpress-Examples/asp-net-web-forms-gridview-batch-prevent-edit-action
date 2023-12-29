@@ -6,9 +6,6 @@
 
 # Grid View for ASP.NET Web Forms - Prevent the cell edit action on the client in batch edit mode
 
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/134059439/)**
-<!-- run online end -->
 
 This example handles the client-side [FocusedCellChanging](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.FocusedCellChanging) event to disable the cell edit action in [batch edit mode](https://docs.devexpress.com/AspNet/16443/components/grid-view/concepts/edit-data/batch-edit-mode) based on a condition defined in code.
 
